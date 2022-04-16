@@ -111,12 +111,12 @@ def generate_git_stuff():
 def generate_github_workflow(proj_name):
     print("Generating GitHub workflow...")
     workflow = f"""name: {proj_name} tests
-
+\n
 on:
     workflow_dispatch:
     push:
         branches: [ master ]
-
+\n
 jobs:
     tests:
     runs-on: ubuntu-latest
@@ -129,13 +129,13 @@ jobs:
         with:
             python-version: ${{{{ matrix.pv }}}}
             architecture: 'x64'
-    
+\n
         - name: Install Poetry
         run: pip install poetry
-    
+\n
         - name: Install dependencies
         run: make install
-        
+\n
         - name: Tests
         run: make cov
 """
