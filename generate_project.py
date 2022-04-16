@@ -65,15 +65,15 @@ name = "{proj_name}"
 version = "0.1.0"
 description = "Python-Poetry template"
 authors = ["Ledmington <ledmington.dev@gmail.com>"]
-
+\n
 [tool.poetry.dependencies]
 python = "^3.9"
-
+\n
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.1"
 pytest-cov = "^3.0.0"
 black = "^22.3.0"
-
+\n
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
