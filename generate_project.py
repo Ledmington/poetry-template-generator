@@ -30,25 +30,25 @@ def generate_cov_config(proj_name):
 def generate_makefile(proj_name):
     print("Generating Makefile...")
     makefile = f"""RUN=poetry run
-
+\n
 .PHONY: cov
-
+\n
 update:
 	poetry update
 	poetry lock
-
+\n
 install:
 	poetry install
-
+\n
 cov:
 	${{RUN}} pytest --cov-config=.cov_config --cov-report html:cov_report --cov=./{proj_name} ./{proj_name}/tests
-
+\n
 format:
 	${{RUN}} black .
-
+\n
 todo:
 	find . | grep .py$$ | grep -rnw . -e TODO
-
+\n
 clean:
 	rm -rf cov_report dist .idea .ipynb_checkpoints
 	rm -f .coverage*
