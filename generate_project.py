@@ -8,6 +8,7 @@ def generate_structure(proj_name):
     test_dir = main_dir + "/tests"
 
     os.mkdir(main_dir)
+    open(main_dir+"/__init__.py", "w").close()
     os.mkdir(src_dir)
     open(src_dir+"/__init__.py", "w").close()
     with open(src_dir+"/main.py", "w") as f:
