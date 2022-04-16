@@ -17,3 +17,5 @@ The program will ask for the name of the main package and it will generate:
  - a `Makefile` to make things even simpler
  - a `.gitignore` and a `.gitattributes`
  - a simple GitHub CI workflow
+
+After the script has terminated, you can delete the script `generate_project.py` and start developing. Don't forget to `make install` before everything else, though.
