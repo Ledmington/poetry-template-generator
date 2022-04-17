@@ -101,7 +101,9 @@ def generate_git_stuff():
     ignore = """cov_report/
 .coverage*
 **/.pytest_cache
-**/__pycache__\n"""
+**/__pycache__\n
+dist/
+"""
     attributes = "* text=auto eol=lf\n"
     with open("./.gitignore", "w") as f:
         f.write(ignore)
